@@ -127,7 +127,7 @@ if __name__ == "__main__":
     svs = SignatureVerificationSystem()
     
     # Load and prepare data
-    X, y = svs.load_signatures(r"D:\Resume work\signature_data")
+    X, y = svs.load_signatures(r"D:\github project\signature_data")
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     
     # Train model
@@ -137,5 +137,5 @@ if __name__ == "__main__":
     svs.evaluate_model(X_test, y_test)
     
     # Manual verification example
-    test_signature = r"D:\Resume work\signature_data\fake1.jpg"
+    test_signature = r"D:\github project\signature_data\fake1.jpg"
     svs.manual_verification(test_signature)
